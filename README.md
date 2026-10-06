@@ -1,11 +1,28 @@
-# A Google Trend Enhanced Deep Learning Model for the Prediction of Renewable Energy Asset Price
+# Renewable Energy Asset Price Forecasting
 
-This paper investigates the predictive efficiency of various forecasting models for renewable energy asset prices, specifically focusing on renewable energy exchange-traded funds (ETFs). It integrates sentiment data, including a novel Google Trend Index, with deep learning techniques to improve predictive accuracy.
+This repository contains the data, model code, regression work, and saved results behind a study of renewable-energy exchange-traded fund prices. The research combines market information with two sentiment measures: a fund-level investor sentiment index and a Google Trends index built from ETF-related searches.
 
-## Citation
-If you use or reference this work in your research, please cite the following paper:
+The project compares CNN, BiLSTM, and CNN-LSTM forecasting models. In the published study, the CNN-LSTM model performed best, and modified Diebold-Mariano tests were used to compare forecast accuracy.
 
-Mishra, L., Dinesh, B., Kavyassree, P. M., & Mishra, N. (2025). A Google Trend enhanced deep learning model for the prediction of renewable energy asset price. *Knowledge-Based Systems*, 308, 112733. [https://doi.org/10.1016/j.knosys.2024.112733](https://doi.org/10.1016/j.knosys.2024.112733)
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| `data/` | Market and supporting data used in the study |
+| `google trends/` and `google trend share/` | Search-interest inputs and related processing |
+| `models/` | Deep-learning model experiments |
+| `panel regression/` | Panel-regression analysis |
+| `benchmark_analysis/` | Benchmark comparisons |
+| `results/` | Saved outputs from the experiments |
+
+This is a research archive rather than a packaged application. Start with the notebooks or scripts inside the folder that matches the part of the paper you want to reproduce. Check the local file paths and data assumptions before running them on a new machine.
+
+## Paper and citation
+
+Lalatendu Mishra, Balaji Dinesh, P. M. Kavyassree, and Nachiketa Mishra, "A Google Trend enhanced deep learning model for the prediction of renewable energy asset price," *Knowledge-Based Systems*, 308, 112733.
+
+- [DOI](https://doi.org/10.1016/j.knosys.2024.112733)
+- [Article on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0950705124013674)
 
 ```bibtex
 @article{mishra2024google,
@@ -18,30 +35,4 @@ Mishra, L., Dinesh, B., Kavyassree, P. M., & Mishra, N. (2025). A Google Trend e
 }
 ```
 
-## Abstract
-
-This study investigates the predictive efficiency of various forecasting models for renewable energy asset prices, using oil price and investor sentiment. For renewable energy assets, renewable energy exchange-traded funds (ETFs) are considered. Two sentiment indices are constructed using the first principal component: a fund-level investor sentiment index based on traditional indices (the Relative Strength Index and the Psychological Line Index), and a Google Trend Index derived from search trend data with keywords related to the respective renewable energy ETFs.
-
-We propose a prediction model integrating both sentiment indices within a deep learning framework. The study shows that models incorporating the modified fund-level investor sentiment and Google Trends indices outperform those using unmodified indices. The results highlight the effectiveness of multi-source sentiment integration, with a significant contribution from the Google Trend Index. Among the models tested, the CNN-LSTM model outperforms both CNN and BiLSTM models, validated by Modified Diebold-Mariano tests.
-
-The findings underscore the importance of integrating diverse data sources and advanced modeling techniques to improve prediction accuracy in the renewable energy sector.
-
-## Keywords
-- Renewable energy asset price
-- Deep learning
-- Oil price
-- Investor sentiment
-- Google Trends
-
-## Research Links
-
-- **DOI**: [https://doi.org/10.1016/j.knosys.2024.112733](https://doi.org/10.1016/j.knosys.2024.112733)
-- **Full Paper**: [ScienceDirect Article](https://www.sciencedirect.com/science/article/pii/S0950705124013674)
-
-## Contribution
-
-This study offers important insights into the prediction of renewable energy asset prices, demonstrating the effectiveness of integrating multiple sentiment indices (including Google Trends) within deep learning models like CNN-LSTM. These results are useful for various stakeholders in the renewable energy sector, including investors, analysts, and policymakers.
-
-## Conclusion
-
-The integration of both traditional sentiment measures and Google Trends data into a deep learning framework significantly improves the prediction of renewable energy asset prices. This approach offers a promising direction for future research and real-world applications in the renewable energy market.
+This repository is a fork of [balajidinesh/renewable-energy-asset-price](https://github.com/balajidinesh/renewable-energy-asset-price). Please cite the paper if you use the research or its materials.
